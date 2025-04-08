@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppPessoa.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AppPessoa.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AppPessoa.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AppPessoa.props",
+      "PackagePath": "build\\AppPessoa.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AppPessoa.props",
+      "PackagePath": "buildMultiTargeting\\AppPessoa.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AppPessoa.props",
+      "PackagePath": "buildTransitive\\AppPessoa.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
