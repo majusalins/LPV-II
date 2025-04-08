@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LS/v2H6ML9YagpZyxJuzlOYhsPUZ5ZvzqYMR7WRDVUU=",
+  "Hash": "OeiM7Mu6G0kVAB0G255EVWECnUeneCtZoMamCws2Q4I=",
   "Source": "AppPessoa",
   "BasePath": "_content/AppPessoa",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "AppPessoa\\wwwroot",
       "Source": "AppPessoa",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
       "BasePath": "_content/AppPessoa",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppPessoa.styles.css",
+      "Identity": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppPessoa.styles.css",
       "SourceId": "AppPessoa",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/AppPessoa",
-      "RelativePath": "AppPessoa.styles.css",
+      "RelativePath": "AppPessoa#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,17 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "rkhrh08dti",
+      "Integrity": "uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppPessoa.styles.css"
+      "OriginalItemSpec": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppPessoa.styles.css"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppPessoa.bundle.scp.css",
+      "Identity": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppPessoa.bundle.scp.css",
       "SourceId": "AppPessoa",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/AppPessoa",
-      "RelativePath": "AppPessoa.bundle.scp.css",
+      "RelativePath": "AppPessoa#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -50,85 +52,589 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "rkhrh08dti",
+      "Integrity": "uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppPessoa.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppPessoa.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\app.css",
       "SourceId": "AppPessoa",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
       "BasePath": "_content/AppPessoa",
-      "RelativePath": "app.css",
+      "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "da95v2qkru",
+      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "AppPessoa",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
       "BasePath": "_content/AppPessoa",
-      "RelativePath": "bootstrap/bootstrap.min.css",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "AppPessoa",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
       "BasePath": "_content/AppPessoa",
-      "RelativePath": "bootstrap/bootstrap.min.css.map",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\favicon.png",
       "SourceId": "AppPessoa",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\",
       "BasePath": "_content/AppPessoa",
-      "RelativePath": "favicon.png",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "app.da95v2qkru.css",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da95v2qkru"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "AppPessoa.bundle.scp.css",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppPessoa.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o="
+        }
+      ]
+    },
+    {
+      "Route": "AppPessoa.rkhrh08dti.bundle.scp.css",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppPessoa.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rkhrh08dti"
+        },
+        {
+          "Name": "label",
+          "Value": "AppPessoa.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o="
+        }
+      ]
+    },
+    {
+      "Route": "AppPessoa.rkhrh08dti.styles.css",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppPessoa.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rkhrh08dti"
+        },
+        {
+          "Name": "label",
+          "Value": "AppPessoa.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o="
+        }
+      ]
+    },
+    {
+      "Route": "AppPessoa.styles.css",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppPessoa.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uwJeMYl4qdYP463QIwFIc2MECjQ090zi1bWWrjZgR/o="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6gzpyzhau4"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\2022202060035\\source\\repos\\majusalins\\LPV-II\\AppPessoa\\AppPessoa\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 23:14:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
     }
   ]
 }

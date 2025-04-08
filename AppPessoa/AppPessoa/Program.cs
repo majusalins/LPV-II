@@ -4,11 +4,13 @@ using AppPessoa.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<PessoaService>();
+builder.Services.AddSingleton<ContextBD>();
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddScoped<PessoaService>();
-builder.Services.AddSingleton<ContextBD>();
+
 
 var app = builder.Build();
 
