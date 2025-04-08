@@ -1,0 +1,32 @@
+﻿@page "/cadastro"
+@using AppPessoa.Models;
+@using AppPessoa.Services;
+@inject PessoaService pessoaService;
+@inject NavigationManager navegacao;
+
+<h3>Cadastro</h3>
+
+<div class="container">
+
+</div>
+
+@code {
+	private bool novo = false;
+	private bool campoBloqueado = false;
+	private Pessoa? pessoa = new Pessoa();
+	private static int id = 0;
+
+	public async Task Salvar()
+	{
+		pessoa.Id = ++id;
+		await pessoaService.Add(pessoa);
+		novo = true;
+		campoBloqueado = true;
+	}
+
+	public void NovoRegistro()
+	{
+		novo = false;
+		navegacao.NavigateTo("/cadastro", forceLoad: true);
+	}
+}
