@@ -32,20 +32,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb25zdWx0YS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2022202060035/source/repos/majusalins/LPV-II/AppPessoa/AppPessoa/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/2022202060035/source/repos/majusalins/LPV-II/AppPessoa/AppPessoa/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/2022202060035/source/repos/majusalins/LPV-II/AppPessoa/AppPessoa/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2022202060035/source/repos/majusalins/LPV-II/AppPessoa/AppPessoa/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+[C:/Users/2022202060035/source/repos/majusalins/LPV-II/AppPessoa/AppPessoa/Components/Pages/ListaDePessoas.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMaXN0YURlUGVzc29hcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/2022202060035/source/repos/majusalins/LPV-II/AppPessoa/AppPessoa/Components/Routes.razor]

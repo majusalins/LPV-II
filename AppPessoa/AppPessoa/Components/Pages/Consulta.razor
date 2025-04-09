@@ -1,45 +1,72 @@
-﻿@page "/lista"
+﻿@page "/consulta"
 @rendermode InteractiveServer
 @using AppPessoa.Models
 @using AppPessoa.Services
 @inject PessoaService pessoaService
+@inject NavigationManager navegacao
 
+<h3>Consulta de Pessoas</h3>
 
-<h3>Pessoas Cadastradas:</h3>
+<div class="container">
+	<nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+	<div class="form-group">
+		<label for="input-datalist">Buscar</label>
+		<input type="text" class="form-control" placeholder="Buscar" list="lista-pessoas" @onchange="SelecionarCPF">
+		<datalist id="lista-pessoas">
+			@foreach (var item in pessoas)
+			{
+				<option value="@item.Cpf">@item.Nome</option>
+			}
+		</datalist>
+	</div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Data de Nascimento</th>
-            <th>Telefone</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in pessoas)
-        {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.Nome</td>
-                <td>@item.Cpf</td>
-                <td>@item.DataNasc</td>
-                <td>@item.Telefone</td>
-            </tr>
-        }
-    </tbody>
-</table>
+	<nav class="navbar navbar-light" style="background-color: white"></nav>
+	<nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+	<nav class="navbar navbar-light" style="background-color: white"></nav>
 
+	<div class="mb-3">
+		<label for="exampleFormControlInput1" class="form-label">NOME:</label>
+		<input @bind="pessoa.Nome" type="text" class="form-control" id="exampleFormControlInput1" disabled="@campoBloqueado">
+	</div>
+	<div class="row align-items-start">
+		<div class="col">
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">CPF:</label>
+				<input @bind="pessoa.Cpf" type="text" class="form-control" id="exampleFormControlInput2" disabled="@campoBloqueado">
+			</div>
+		</div>
+		<div class="col">
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">DATA DE NASCIMENTO:</label>
+				<input @bind="pessoa.DataNasc" type="date" class="form-control" id="exampleFormControlInput2" disabled="@campoBloqueado">
+			</div>
+		</div>
+		<div class="col">
+			<div class="mb-3">
+				<label for="exampleFormControlInput1" class="form-label">TELEFONE:</label>
+				<input @bind="pessoa.Telefone" type="tel" class="form-control" id="exampleFormControlInput2" disabled="@campoBloqueado">
+			</div>
+		</div>
+	</div>
+
+</div>
 
 @code {
+	private List<Pessoa> pessoas { get; set; }
+	private Pessoa? pessoa = new Pessoa();
+	private bool campoBloqueado = false;
 
-    List<Pessoa> pessoas { get; set; }
+	protected override async Task OnInitializedAsync()
+	{
+		pessoas = new List<Pessoa>();
+		var lista = pessoaService?.Pessoas();
+		pessoas = lista.Result.ToList();
+	}
 
-    protected override async Task OnInitializedAsync()
-    {
-        pessoas = new List<Pessoa>();
-        var lista = pessoaService?.Pessoas();
-        pessoas = lista.Result.ToList();
-    }
+	public void SelecionarCPF(ChangeEventArgs e)
+	{
+		string cpf = e.Value.ToString();
+		pessoa = pessoas.Where(p => p.Cpf == cpf).FirstOrDefault();
+	}
+
 }

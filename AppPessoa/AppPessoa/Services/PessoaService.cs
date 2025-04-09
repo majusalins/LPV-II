@@ -18,12 +18,18 @@ namespace AppPessoa.Services
             return pessoas;
         }
 
+        /*public async Task<List<Pessoa>>? PessoasOrdenadas()
+        {
+            var pessoasORD = _context.Pessoas?.ToList().OrderBy(y => y.Nome).ToList();
+            return pessoasORD;
+        }*/
+
         public async Task<Pessoa>? GetPessoa(int id)
         {
             var pessoa = _context.Pessoas?.Where(p => p.Id == id).FirstOrDefault();
             return pessoa;
-        } 
-        
+        }
+
         public async Task<Pessoa>? GetPessoa(string cpf)
         {
             var pessoa = _context.Pessoas?.Where(p => p.Cpf == cpf).FirstOrDefault();
