@@ -1,0 +1,17 @@
+﻿@page "/primeiroCadastro"
+@using AppInventario.Models;
+@using AppInventario.Services;
+@inject PessoaService pessoaService;
+@inject NavigationManager navegacao;
+
+<h3>PRIMEIRO REGISTRO DE PESSOA COM PROPRIEDADES</h3>
+
+@code {
+	private string? Descricao { get; set; }
+	private double? Valor { get; set; }
+	private bool novo = false;
+	private bool campoBloqueado = false;
+	private Pessoa? pessoa = new Pessoa();
+	private List<Propriedade> bensRegistrados = new List<Propriedade>();
+
+}
