@@ -18,6 +18,6 @@ namespace AppInventario.Models
         public int? IdPessoa { get; set; }
 
         [ForeignKey("IdPessoa")]
-        public Pessoa? pessoa { get; set; }
+        public Pessoa? Pessoa { get; set; }
     }
 }

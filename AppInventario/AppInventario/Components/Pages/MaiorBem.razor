@@ -1,0 +1,72 @@
+﻿@page "/pessoasMaiorBem"
+@rendermode InteractiveServer
+@using AppInventario.Models
+@using AppInventario.Services
+@inject PessoaService pessoaService
+
+<h3>PESSOAS COM SEU BEM DE MAIOR VALOR</h3>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Descrição do Bem Mais Valioso</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (PessoasComMaiorBem != null && PessoasComMaiorBem.Any())
+            {
+                @foreach (var item in PessoasComMaiorBem)
+                {
+                    <tr>
+                        <td>@item.Nome</td>
+                        <td>@item.Cpf</td>
+                        <td>@item.PropriedadeMaiorValor?.Descricao</td>
+                        <td>@item.PropriedadeMaiorValor?.Valor?.ToString("C")</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4" class="text-center">Nenhum registro encontrado</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private List<PessoaComMaiorBem> PessoasComMaiorBem { get; set; } = new List<PessoaComMaiorBem>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var pessoas = await pessoaService.Pessoas();
+        if (pessoas != null)
+        {
+            foreach (var pessoa in pessoas)
+            {
+                if (pessoa.Propriedades != null && pessoa.Propriedades.Any())
+                {
+                    var maiorBem = pessoa.Propriedades.OrderByDescending(p => p.Valor).FirstOrDefault();
+                    PessoasComMaiorBem.Add(new PessoaComMaiorBem
+                        {
+                            Nome = pessoa.Nome,
+                            Cpf = pessoa.Cpf,
+                            PropriedadeMaiorValor = maiorBem
+                        });
+                }
+            }
+        }
+    }
+
+    private class PessoaComMaiorBem
+    {
+        public string? Nome { get; set; }
+        public string? Cpf { get; set; }
+        public Propriedade? PropriedadeMaiorValor { get; set; }
+    }
+}

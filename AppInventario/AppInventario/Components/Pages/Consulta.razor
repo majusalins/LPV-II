@@ -1,5 +1,186 @@
-﻿<h3>Consulta</h3>
+﻿@page "/consulta"
+@rendermode InteractiveServer
+@using AppInventario.Models
+@using AppInventario.Services
+@inject PessoaService pessoaService;
+@inject NavigationManager navegacao;
+
+<h3>CONSULTA DE PESSOAS</h3>
+
+<div class="container">
+    <nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+    <div class="form-group">
+        <label for="input-datalist">Buscar</label>
+        <input type="text" class="form-control" placeholder="Buscar" list="lista-pessoas" @onchange="SelecionarPessoas">
+        <datalist id="lista-pessoas">
+            @foreach (var item in Pessoas)
+            {
+                <option value="@item.Cpf">@item.Nome</option>
+            }
+        </datalist>
+    </div>
+
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+    <nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">NOME:</label>
+        <input @bind="pessoa.Nome" type="text" class="form-control" id="exampleFormControlInput1" disabled="true">
+    </div>
+    <div class="row align-items-start">
+        <div class="col">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">CPF:</label>
+                <input @bind="pessoa.Cpf" type="text" class="form-control" id="exampleFormControlInput2" disabled="true">
+            </div>
+        </div>
+        <div class="col">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">DATA DE NASCIMENTO:</label>
+                <input @bind="pessoa.DataNasc" type="text" class="form-control" id="exampleFormControlInput2" disabled="true">
+            </div>
+        </div>
+        <div class="col">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">TELEFONE:</label>
+                <input @bind="pessoa.Telefone" type="tel" class="form-control" id="exampleFormControlInput2" disabled="true">
+            </div>
+        </div>
+    </div>
+
+    <!-- Mostrar a soma total de todos bens (Item 1) -->
+    <div class="alert alert-info">
+        <strong>Total de todos os bens:</strong> @TotalBens.ToString("C")
+    </div>
+
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+    <nav class="navbar navbar-light" style="background-color: darkorange"></nav>
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+
+    <!-- Filtros (Item 2) -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label class="form-label">Filtrar por valor mínimo:</label>
+                <input type="number" class="form-control" @bind="ValorFiltro" @oninput="AplicarFiltros" step="0.01" min="0" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label class="form-label">Filtrar por descrição:</label>
+                <input type="text" class="form-control" @bind="DescricaoFiltro" @oninput="AplicarFiltros" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Mostrar totais dos filtros (Itens 2.3 e 2.4) -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="alert alert-primary">
+                <strong>Total geral dos bens:</strong> @TotalBens.ToString("C")
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="alert alert-warning">
+                <strong>Total dos bens filtrados:</strong> @TotalBensFiltrados.ToString("C")
+            </div>
+        </div>
+    </div>
+
+    <h4 style="text-align:center">Bens Cadastrados</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (bensFiltrados != null && bensFiltrados.Any())
+            {
+                @foreach (var item in bensFiltrados)
+                {
+                    <tr>
+                        <td>@item.Descricao</td>
+                        <td>@item.Valor?.ToString("C")</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="2" class="text-center">Nenhum bem encontrado</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 @code {
+    private string? Descricao { get; set; }
+    private double? Valor { get; set; }
+    private bool novo = false;
+    private bool campoBloqueado = false;
+    private List<Pessoa> Pessoas { get; set; } = new List<Pessoa>();
+    private Pessoa pessoa = new Pessoa();
+    private List<Propriedade> bensRegistrados = new List<Propriedade>();
+    private List<Propriedade> bensFiltrados = new List<Propriedade>();
 
+    // Filtros
+    private double? ValorFiltro { get; set; }
+    private string DescricaoFiltro { get; set; } = string.Empty;
+
+    // Totais
+    private double TotalBens => bensRegistrados?.Sum(b => b.Valor ?? 0) ?? 0;
+    private double TotalBensFiltrados => bensFiltrados?.Sum(b => b.Valor ?? 0) ?? 0;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var lista = await pessoaService.Pessoas();
+        if (lista != null)
+        {
+            Pessoas = lista.ToList();
+        }
+    }
+
+    private void SelecionarPessoas(ChangeEventArgs e)
+    {
+        string cpf = e.Value?.ToString() ?? string.Empty;
+        var p = Pessoas.FirstOrDefault(p => p.Cpf == cpf);
+        if (p != null)
+        {
+            pessoa = p;
+            bensRegistrados = pessoa.Propriedades ?? new List<Propriedade>();
+            bensFiltrados = bensRegistrados;
+            StateHasChanged();
+        }
+    }
+
+    private void AplicarFiltros()
+    {
+        if (bensRegistrados == null || !bensRegistrados.Any())
+        {
+            bensFiltrados = new List<Propriedade>();
+            return;
+        }
+
+        var query = bensRegistrados.AsQueryable();
+
+        // Aplicar filtro por valor (Item 2.1)
+        if (ValorFiltro.HasValue && ValorFiltro > 0)
+        {
+            query = query.Where(b => b.Valor >= ValorFiltro);
+        }
+
+        // Aplicar filtro por descrição (Item 2.2)
+        if (!string.IsNullOrWhiteSpace(DescricaoFiltro))
+        {
+            query = query.Where(b => b.Descricao != null &&
+                                   b.Descricao.Contains(DescricaoFiltro, StringComparison.OrdinalIgnoreCase));
+        }
+
+        bensFiltrados = query.ToList();
+    }
 }

@@ -36,7 +36,7 @@ namespace AppInventario.Services
 
         public async Task<List<Propriedade>> Propriedades()
         {
-            var p = await _context.Propriedades.Include(p => p.pessoa).ToListAsync();
+            var p = await _context.Propriedades.Include(p => p.Pessoa).ToListAsync();
             return p;
         }
     }
