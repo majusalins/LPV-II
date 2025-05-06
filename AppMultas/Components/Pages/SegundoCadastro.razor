@@ -5,7 +5,87 @@
 @inject MultaController multaController
 @inject NavigationManager navegacao
 
-<h3>SegundoCadastro</h3>
+<h3>REGISTRO DE MULTAS DE VEÍCULOS COM CADASTRO</h3>
+
+<div class="container">
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+    <nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+
+    <label for="veiculo" class="form-label">CARROS CADASTRADOS:</label>
+    <select @onchange="SelecionarVeiculo" class="form-select" aria-label="Selecione um carro">
+        <option selected>Selecione uma placa</option>
+        @foreach (var item in listaVeiculos)
+        {
+                <option value=@item.Id>@item.Placa</option>
+        }
+    </select>
+
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+    <nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">MODELO:</label>
+        <input @bind="ValorMulta" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">MARCA:</label>
+        <input @bind="Veiculo.marca" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">PLACA:</label>
+        <input @bind="Veiculo.placa" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+    <nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+    @*###################################################################*@
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">DESCRIÇÃO:</label>
+        <input @bind="Descricao" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">VALOR :</label>
+        <input @bind="ValorMulta" type="number" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+      @if(enabledButton){
+        <button type="button" class="btn btn-primary" @onclick="AddMulta">ADICIONAR</button>
+        <button type="button" class="btn btn-warning" @onclick="Cancelar">CANCELAR</button>
+        <button type="button" class="btn btn-success" @onclick="Salvar">SALVAR</button>
+    }else{
+         <div class="alert alert-success" role="alert">
+            Salvo com Sucesso;
+        </div>
+        <button type="button" class="btn btn-primary" @onclick="NovoRegistro">NOVO REGISTRO</button>
+    }
+
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+
+    <nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Descrição:</th>
+                <th>Valor:</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var multa in listaMultas)
+            {
+                    <tr>
+                        <td>@multa.Descricao</td>
+                        <td>@multa.ValorMulta</td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 @code {
 	public List<Multa> multas = new List<Multa>();
