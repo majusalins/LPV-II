@@ -26,19 +26,19 @@
         <div class="col">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">MODELO:</label>
-                <input @bind="Veiculo.Modelo" type="text" class="form-control" id="exampleFormControlInput1">
+                <input @bind="veiculo.Modelo" type="text" class="form-control" id="exampleFormControlInput1">
             </div>
         </div>
         <div class="col">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">MARCA:</label>
-                <input @bind="Veiculo.Marca" type="text" class="form-control" id="exampleFormControlInput1">
+                <input @bind="veiculo.Marca" type="text" class="form-control" id="exampleFormControlInput1">
             </div>
         </div>
         <div class="col">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">PLACA:</label>
-                <input @bind="Veiculo.Placa" type="text" class="form-control" id="exampleFormControlInput1">
+                <input @bind="veiculo.Placa" type="text" class="form-control" id="exampleFormControlInput1">
             </div>
         </div>
 
@@ -71,7 +71,7 @@
 </div>
 
 @code {
-    public List<AppMultas> listaMultas = new List<AppMultas>();
+    public List<Multa> listaMultas = new List<Multa>();
     public List<Veiculo> listaVeiculos = new List<Veiculo>();
     public Veiculo? veiculo { get; set; }
 

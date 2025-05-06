@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppMultas.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AppMultas.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AppMultas.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AppMultas.props",
+      "PackagePath": "build\\AppMultas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AppMultas.props",
+      "PackagePath": "buildMultiTargeting\\AppMultas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AppMultas.props",
+      "PackagePath": "buildTransitive\\AppMultas.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
