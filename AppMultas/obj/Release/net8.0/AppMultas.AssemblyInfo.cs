@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppMultas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e8bc70db42718f02049d45c8c590e6a37713545")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a6140f2d140265ccc5ec61965bba0040fffd805")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppMultas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppMultas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

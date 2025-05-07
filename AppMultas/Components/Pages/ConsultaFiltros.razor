@@ -1,0 +1,112 @@
+﻿@page "/consultaFiltros"
+@using AppMultas.Models;
+@using AppMultas.Services;
+@inject VeiculoController veiculoController;
+@rendermode InteractiveServer
+
+<h3>CONSULTA DE MULTAS COM FILTROS</h3>
+
+<div class="container">
+    <label class="form-label">Selecione um veículo:</label>
+    <select @onchange="SelecionarVeiculo" class="form-select">
+        <option value="">Todos os veículos</option>
+        @foreach (var veiculo in veiculos)
+        {
+            <option value="@veiculo.Id">@veiculo.Placa</option>
+        }
+    </select>
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <label class="form-label">Valor mínimo:</label>
+            <input type="number" @bind="valorMinimo" class="form-control" />
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Descrição contém:</label>
+            <input type="text" @bind="textoDescricao" class="form-control" />
+        </div>
+    </div>
+
+    <button @onclick="AplicarFiltros" class="btn btn-primary mt-3">Aplicar Filtros</button>
+
+    <h4 class="mt-4">MULTAS FILTRADAS</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Placa</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var multa in multasFiltradas)
+            {
+                <tr>
+                    <td>@multa.Veiculo?.Placa</td>
+                    <td>@multa.Descricao</td>
+                    <td>@multa.ValorMulta?.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="alert alert-primary">
+                <strong>Total geral:</strong> @TotalGeral.ToString("C")
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="alert alert-info">
+                <strong>Total filtrado:</strong> @TotalFiltrado.ToString("C")
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<Veiculo> veiculos = new();
+    private List<Multa> todasMultas = new();
+    private List<Multa> multasFiltradas = new();
+    private decimal? valorMinimo;
+    private string textoDescricao = string.Empty;
+    private int? veiculoSelecionadoId;
+
+    private decimal TotalGeral => todasMultas.Sum(m => m.ValorMulta ?? 0);
+    private decimal TotalFiltrado => multasFiltradas.Sum(m => m.ValorMulta ?? 0);
+
+    protected override async Task OnInitializedAsync()
+    {
+        veiculos = await veiculoController.ListaDeVeiculos();
+        todasMultas = veiculos.SelectMany(v => v.Multas).ToList();
+        multasFiltradas = new List<Multa>(todasMultas);
+    }
+
+    private void SelecionarVeiculo(ChangeEventArgs e)
+    {
+        veiculoSelecionadoId = int.TryParse(e.Value?.ToString(), out int id) ? id : null;
+        AplicarFiltros();
+    }
+
+    private void AplicarFiltros()
+    {
+        var query = todasMultas.AsQueryable();
+
+        if (veiculoSelecionadoId.HasValue)
+        {
+            query = query.Where(m => m.Veiculo.Id == veiculoSelecionadoId);
+        }
+
+        if (valorMinimo.HasValue)
+        {
+            query = query.Where(m => m.ValorMulta >= valorMinimo);
+        }
+
+        if (!string.IsNullOrEmpty(textoDescricao))
+        {
+            query = query.Where(m => m.Descricao.Contains(textoDescricao, StringComparison.OrdinalIgnoreCase));
+        }
+
+        multasFiltradas = query.ToList();
+    }
+}

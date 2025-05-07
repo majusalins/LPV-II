@@ -1,24 +1,28 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppMultas.bundle.scp.css",
-      "PackagePath": "staticwebassets\\AppMultas.bundle.scp.css"
+      "Id": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppMultas.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AppMultas.vpquiwm28u.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\app.css",
+      "Id": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AppMultas.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AppMultas.Microsoft.AspNetCore.StaticWebAssets.props",

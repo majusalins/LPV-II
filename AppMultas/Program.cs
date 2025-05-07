@@ -12,7 +12,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddScoped<VeiculoController>();
 builder.Services.AddScoped<MultaController>();
 
-string mySqlConexao = builder.Configuration.GetConnectionString("BaseConexaoMySQL");
+string mySqlConexao = builder.Configuration.GetConnectionString("ConexaoMySQL");
 builder.Services.AddDbContextPool<ContextoBD>(options =>
 options.UseMySql(mySqlConexao, ServerVersion.AutoDetect(mySqlConexao)));
 

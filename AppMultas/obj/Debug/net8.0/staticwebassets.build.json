@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QsWmUwnjD50r+6mEyDqKMJheEuT89PLs3Vsrpc16rb8=",
+  "Hash": "1huI1Sq4y5ze8l9Pjg4wpDei1yexu83Umv7wChndeoU=",
   "Source": "AppMultas",
   "BasePath": "_content/AppMultas",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "AppMultas\\wwwroot",
       "Source": "AppMultas",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\",
       "BasePath": "_content/AppMultas",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppMultas.styles.css",
+      "Identity": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppMultas.styles.css",
       "SourceId": "AppMultas",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/AppMultas",
-      "RelativePath": "AppMultas.styles.css",
+      "RelativePath": "AppMultas#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,17 +31,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "vpquiwm28u",
+      "Integrity": "w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppMultas.styles.css"
+      "OriginalItemSpec": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppMultas.styles.css"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppMultas.bundle.scp.css",
+      "Identity": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppMultas.bundle.scp.css",
       "SourceId": "AppMultas",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/AppMultas",
-      "RelativePath": "AppMultas.bundle.scp.css",
+      "RelativePath": "AppMultas#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -50,85 +52,589 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "vpquiwm28u",
+      "Integrity": "w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppMultas.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppMultas.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\app.css",
       "SourceId": "AppMultas",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\",
       "BasePath": "_content/AppMultas",
-      "RelativePath": "app.css",
+      "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "da95v2qkru",
+      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "AppMultas",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\",
       "BasePath": "_content/AppMultas",
-      "RelativePath": "bootstrap/bootstrap.min.css",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "AppMultas",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\",
       "BasePath": "_content/AppMultas",
-      "RelativePath": "bootstrap/bootstrap.min.css.map",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\favicon.png",
       "SourceId": "AppMultas",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppMultas\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\",
       "BasePath": "_content/AppMultas",
-      "RelativePath": "favicon.png",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "app.da95v2qkru.css",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da95v2qkru"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "AppMultas.bundle.scp.css",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppMultas.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8="
+        }
+      ]
+    },
+    {
+      "Route": "AppMultas.styles.css",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppMultas.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8="
+        }
+      ]
+    },
+    {
+      "Route": "AppMultas.vpquiwm28u.bundle.scp.css",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppMultas.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vpquiwm28u"
+        },
+        {
+          "Name": "label",
+          "Value": "AppMultas.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8="
+        }
+      ]
+    },
+    {
+      "Route": "AppMultas.vpquiwm28u.styles.css",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppMultas.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5901"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vpquiwm28u"
+        },
+        {
+          "Name": "label",
+          "Value": "AppMultas.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w5QP5nR8MS8HOuLZTY7f+gYY1flxerpA/j+rJLwFLv8="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6gzpyzhau4"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\2022202060035\\Documents\\GitHub\\LPV-II\\AppMultas\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 23:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
     }
   ]
 }

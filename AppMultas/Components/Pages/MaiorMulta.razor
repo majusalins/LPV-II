@@ -1,0 +1,45 @@
+﻿@page "/maioresMultas"
+@using AppMultas.Models;
+@using AppMultas.Services;
+@inject VeiculoController veiculoController;
+@rendermode InteractiveServer
+
+<h3>VEÍCULOS COM MAIORES MULTAS</h3>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Placa</th>
+                <th>Modelo</th>
+                <th>Maior Multa</th>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in veiculosComMaiorMulta)
+            {
+                <tr>
+                    <td>@item.Veiculo?.Placa</td>
+                    <td>@item.Veiculo?.Modelo</td>
+                    <td>@item.ValorMulta?.ToString("C")</td>
+                    <td>@item.Descricao</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    private List<Multa> veiculosComMaiorMulta = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var veiculos = await veiculoController.ListaDeVeiculos();
+
+        veiculosComMaiorMulta = veiculos
+            .Where(v => v.Multas.Any())
+            .Select(v => v.Multas.OrderByDescending(m => m.ValorMulta).First())
+            .ToList();
+    }
+}

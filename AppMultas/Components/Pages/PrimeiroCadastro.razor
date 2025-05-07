@@ -3,6 +3,8 @@
 @using AppMultas.Services;
 @inject VeiculoController veiculoController
 @inject NavigationManager navegacao
+@rendermode InteractiveServer
+
 
 <h3>PRIMEIRO REGISTRO DE MULTA DO VEÍCULO</h3>
 
@@ -29,6 +31,7 @@
     <nav class="navbar navbar-light" style="background-color: white"></nav>
 
     @*###################################################################*@
+
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">DESCRIÇÃO:</label>
         <input @bind="Descricao" type="text" class="form-control" disabled="@campoBloqueado">

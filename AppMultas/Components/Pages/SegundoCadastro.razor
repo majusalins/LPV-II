@@ -1,6 +1,7 @@
 ﻿@page "/segundoCadastro"
 @using AppMultas.Models;
 @using AppMultas.Services;
+@rendermode InteractiveServer
 @inject VeiculoController veiculoController
 @inject MultaController multaController
 @inject NavigationManager navegacao
@@ -25,7 +26,7 @@
 
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">MODELO:</label>
-        <input @bind="ValorMulta" type="text" class="form-control" id="exampleFormControlInput1">
+        <input @bind="veiculo.Modelo" type="text" class="form-control" id="exampleFormControlInput1">
     </div>
 
     <div class="mb-3">
@@ -65,9 +66,7 @@
     }
 
     <nav class="navbar navbar-light" style="background-color: white"></nav>
-
     <nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
-
     <nav class="navbar navbar-light" style="background-color: white"></nav>
 
     <table class="table">
