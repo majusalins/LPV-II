@@ -1,0 +1,115 @@
+﻿@page "/cadastroCargo"
+@rendermode InteractiveServer
+@using AppConcurso.Models
+@using AppConcurso.Controllers
+@inject CargoController cargoController
+@inject NavigationManager navegacao
+
+
+<div class="container">
+	<h3 class="mb-4">CADASTRO DE CARGO</h3>
+	<div class="card">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Nome do Cargo:</label>
+						<input @bind="cargo.NomeCargo" class="form-control" disabled="@campoBloqueado" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Edital:</label>
+						<input @bind="cargo.Edital" class="form-control" disabled="@campoBloqueado" />
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-3">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Salário Base:</label>
+						<input @bind="cargo.Salario" type="number" step="0.01" class="form-control" disabled="@campoBloqueado" />
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-4">
+				@if (novo == false)
+				{
+					<button class="btn btn-primary" @onclick="Salvar">Salvar</button>
+					<button class="btn btn-secondary ml-2" @onclick="NovoCadastro">Cancelar</button>
+				}
+				else
+				{
+					<div class="alert alert-success" role="alert">
+						Salvo com Sucesso!
+					</div>
+					<button class="btn btn-success" @onclick="NovoCadastro">Novo Cadastro</button>
+				}
+			</div>
+		</div>
+	</div>
+
+	<div class="card mt-4">
+		<div class="card-header">
+			<h5>Cargos Cadastrados</h5>
+		</div>
+		<div class="card-body">
+			@if (cargosCadastrados == null || cargosCadastrados.Count == 0)
+			{
+				<p>Nenhum cargo cadastrado.</p>
+			}
+			else
+			{
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Edital</th>
+							<th>Salário</th>
+							<th>Inscrições</th>
+							<th>Ações</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in cargosCadastrados)
+						{
+							<tr>
+								<td>@item.NomeCargo</td>
+								<td>@item.Edital</td>
+								<td>@item.Salario?.ToString("C")</td>
+								<td>@(item.Inscricoes?.Count ?? 0)</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			}
+		</div>
+	</div>
+</div>
+
+@code {
+	private Cargo cargo = new Cargo();
+	private List<Cargo> cargosCadastrados = new List<Cargo>();
+	private bool novo = false;
+	private bool campoBloqueado = false;
+
+	private async Task Salvar()
+	{
+		if (!string.IsNullOrWhiteSpace(cargo.NomeCargo))
+		{
+			await cargoController.Add(cargo);
+			await cargoController.Salvar();
+			novo = true;
+			campoBloqueado = true;
+		}
+	}
+
+	private void NovoCadastro()
+	{
+		novo = false;
+		navegacao.NavigateTo("/cadastroCargo", forceLoad: true);
+	}
+
+}
