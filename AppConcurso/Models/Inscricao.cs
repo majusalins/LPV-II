@@ -12,7 +12,7 @@ namespace AppConcurso.Models
         public int? NumInscricao { get; set; }
 
         [Column("data_inscricao")]
-        public DateTime? DataInsc;
+        public DateTime? DataInsc { get; set; }
 
         [Column("nota_conh_gerais")]
         public decimal? NotaConhGerais { get; set; }

@@ -1,0 +1,161 @@
+﻿@page "/cadastroComInscricao"
+@using AppConcurso.Models
+@using AppConcurso.Controllers
+@inject CandidatoController candidatoController
+@inject CargoController cargoController
+@inject InscricaoController inscricaoController
+@inject NavigationManager navegacao
+
+<div class="container">
+    <h3 class="mb-4">CADASTRO DE CANDIDATO COM INSCRIÇÃO</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nome:</label>
+                        <input @bind="novoCandidato.Nome" class="form-control" disabled="@campoBloqueado" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>CPF:</label>
+                        <input @bind="novoCandidato.Cpf" class="form-control" disabled="@campoBloqueado" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Data de Nascimento:</label>
+                        <input type="date" @bind="novoCandidato.DataNasc" class="form-control" disabled="@campoBloqueado" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Cargo:</label>
+                        <select @bind="cargoSelecionadoId" class="form-control" disabled="@campoBloqueado">
+                            <option value="">-- Selecione --</option>
+                            @foreach (var cargo in cargosDisponiveis)
+                            {
+                                <option value="@cargo.Id">@cargo.NomeCargo</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                @if (mostrarConfirmacao)
+                {
+                    <div class="alert alert-success" role="alert">
+                        Cadastro e inscrição realizados com sucesso!
+                    </div>
+                    <button class="btn btn-success" @onclick="NovoCadastro">Nova Inscrição</button>
+                }
+                else
+                {
+                    <button class="btn btn-primary" @onclick="SalvarCadastroComInscricao">Salvar</button>
+                    <button class="btn btn-secondary ml-2" @onclick="LimparFormulario">Cancelar</button>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header">
+            <h5>Candidatos Cadastrados</h5>
+        </div>
+        <div class="card-body">
+            @if (candidatosCadastrados == null || !candidatosCadastrados.Any())
+            {
+                <p>Nenhum candidato cadastrado.</p>
+            }
+            else
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Data Nasc.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var candidato in candidatosCadastrados)
+                        {
+                            <tr>
+                                <td>@candidato.Nome</td>
+                                <td>@candidato.Cpf</td>
+                                <td>@candidato.DataNasc?.ToString("dd/MM/yyyy")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private Candidato novoCandidato = new Candidato();
+    private List<Cargo> cargosDisponiveis = new List<Cargo>();
+    private List<Candidato> candidatosCadastrados = new List<Candidato>();
+    private int cargoSelecionadoId;
+    private bool mostrarConfirmacao = false;
+    private bool campoBloqueado = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CarregarDados();
+    }
+
+    private async Task CarregarDados()
+    {
+        candidatosCadastrados = await candidatoController.ListaCandidatos();
+        cargosDisponiveis = await cargoController.ListaCargos();
+    }
+
+    private async Task SalvarCadastroComInscricao()
+    {
+        try
+        {
+            await candidatoController.Add(novoCandidato);
+            await candidatoController.Salvar();
+
+            var inscricao = new Inscricao
+            {
+                NumInscricao = novoCandidato.Id,
+                IdCargo = cargoSelecionadoId,
+                DataInsc = DateTime.Now
+            };
+
+            await inscricaoController.Add(inscricao);
+            await inscricaoController.Salvar();
+
+            await CarregarDados();
+            
+            mostrarConfirmacao = true;
+            campoBloqueado = true;
+        }
+        catch
+        {
+            // Trate erros aqui
+        }
+    }
+
+    private void NovoCadastro()
+    {
+        novoCandidato = new Candidato();
+        cargoSelecionadoId = 0;
+        mostrarConfirmacao = false;
+        navegacao.NavigateTo("/cadastroComInscricao", forceLoad: true);    
+        }
+
+    private void LimparFormulario()
+    {
+        NovoCadastro();
+        StateHasChanged();
+    }
+}

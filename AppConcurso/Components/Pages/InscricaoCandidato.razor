@@ -7,7 +7,6 @@
 @inject CandidatoController candControl;
 @inject NavigationManager navegacao;
 
-
 <div class="container">
     <h3>INSCRIÇÃO DE CANDIDATO</h3>
 
@@ -18,7 +17,7 @@
 
     <div class="form-group">
         <label>Data de Inscrição:</label>
-        <input class="form-control" value="@DateTime.Today.ToShortDateString()" disabled />
+        <input class="form-control" value="@dataInsc.ToShortDateString()" disabled />
     </div>
 
     <div class="form-group">
@@ -27,7 +26,7 @@
             <option value="">Selecione um candidato</option>
             @foreach (var cand in listaCandidatos)
             {
-                <option value="@cand.Cpf">@cand.Nome - @cand.Cpf</option>
+                <option value="@cand.Id">@cand.Nome - @cand.Cpf</option>
             }
         </select>
     </div>
@@ -35,21 +34,21 @@
     <div class="form-group">
         <label>Cargo:</label>
         <select class="form-control" @onchange="SelecionarCargos">
-            <option selected>Selecione um cargo</option>
+            <option value="">Selecione um cargo</option>
             @foreach (var carg in listaCargos)
             {
-                <option value=@carg.Id>@carg.NomeCargo</option>
+                <option value="@carg.Id">@carg.NomeCargo</option>
             }
         </select>
     </div>
 
-    @if (candidato != null && !string.IsNullOrEmpty(candidato.Cpf))
+    @if (candidatoId.HasValue)
     {
         <div class="card mt-3">
             <div class="card-body">
                 <h5>Dados do Candidato</h5>
-                <p><strong>Nome:</strong> @candidato.Nome</p>
-                <p><strong>CPF:</strong> @candidato.Cpf</p>
+                <p><strong>Nome:</strong> @candidatoSelecionado?.Nome</p>
+                <p><strong>CPF:</strong> @candidatoSelecionado?.Cpf</p>
             </div>
         </div>
     }
@@ -65,59 +64,66 @@
 </div>
 
 @code {
-	private List<Cargo> listaCargos = new List<Cargo>();
-	private List<Candidato> listaCandidatos = new List<Candidato>();
+    private List<Cargo> listaCargos = new();
+    private List<Candidato> listaCandidatos = new();
+    private List<Inscricao> listaInsc = new();
+    private Candidato? candidatoSelecionado;
+    private int? candidatoId;
+    private int? cargoId;
+    private bool enabledButton = true;
+    private int numeroInsc = 0;
+    private DateTime dataInsc = DateTime.Today;
 
-	private Cargo cargo = new Cargo();
-	private Candidato candidato = new Candidato();
+    protected override async Task OnInitializedAsync()
+    {
+        listaCargos = await cargoControl.ListaCargos();
+        listaCandidatos = await candControl.ListaCandidatos();
+        listaInsc = await inscControl.ListaInscricoes();
+        numeroInsc = 10000 + listaInsc.Count + 1; // Geração do número
+    }
 
-	private bool enabledButton = true;
-	private int numeroInsc = 0;
+    private async Task Salvar()
+    {
+        if (candidatoId.HasValue && cargoId.HasValue)
+        {
+            var inscricao = new Inscricao
+            {
+                NumInscricao = numeroInsc,
+                DataInsc = dataInsc,
+                IdCandidato = candidatoId.Value,
+                IdCargo = cargoId.Value
+            };
 
-	protected override async Task OnInitializedAsync()
-	{
-		var listaCarg = await cargoControl.ListaCargos();
-		var listaCand = await candControl.ListaCandidatos();
-		var listaInsc = await inscControl.ListaInscricoes();
+            await inscControl.Add(inscricao);
+            await inscControl.Salvar();
+            
+            enabledButton = false;
+            StateHasChanged();
+        }
+    }
 
-		listaCargos = listaCarg;
-		listaCandidatos = listaCand;
-		numeroInsc = 10000 + listaInsc.Count + 1;
-	}
+    private void Cancelar() => navegacao.NavigateTo("/inscricao");
 
-	private async Task Salvar()
-	{
-		Inscricao inscricao = new Inscricao();
-		inscricao.DataInsc = DateTime.Today;
-		inscricao.NumInscricao = numeroInsc;
-		inscricao.Cargo = cargo;
-		inscricao.Candidato = candidato;
+    private void NovaInscricao()
+    {
+        navegacao.NavigateTo("/inscricao", forceLoad: true);
+    }
 
-		await inscControl.Add(inscricao);
-		await inscControl.Salvar();
-		enabledButton = false;
-	}
+    private void SelecionarCandidatos(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value?.ToString(), out int id))
+        {
+            candidatoId = id;
+            candidatoSelecionado = listaCandidatos.FirstOrDefault(c => c.Id == id);
+            StateHasChanged();
+        }
+    }
 
-	private void Cancelar()
-	{
-		navegacao.NavigateTo("/inscricao", forceLoad: true);
-	}
-
-	public void SelecionarCandidatos(ChangeEventArgs e)
-	{
-		string cpf = e.Value.ToString();
-		candidato = listaCandidatos.Where(p => p.Cpf == cpf).FirstOrDefault();
-	}
-
-	public void SelecionarCargos(ChangeEventArgs e)
-	{
-		int id = Convert.ToInt32(e.Value.ToString());
-		cargo = listaCargos.FirstOrDefault(c => c.Id == id);
-	}
-
-	public void NovaInscricao()
-	{
-		navegacao.NavigateTo("/inscricao", forceLoad: true);
-	}
-
+    private void SelecionarCargos(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value?.ToString(), out int id))
+        {
+            cargoId = id;
+        }
+    }
 }

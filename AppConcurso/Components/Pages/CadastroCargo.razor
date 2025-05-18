@@ -69,7 +69,6 @@
 							<th>Edital</th>
 							<th>Salário</th>
 							<th>Inscrições</th>
-							<th>Ações</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -95,6 +94,17 @@
 	private bool novo = false;
 	private bool campoBloqueado = false;
 
+	protected override async Task OnInitializedAsync()
+    {
+        await CarregarCargos();
+    }
+
+    private async Task CarregarCargos()
+    {
+        cargosCadastrados = await cargoController.ListaCargos();
+        StateHasChanged();
+    }
+
 	private async Task Salvar()
 	{
 		if (!string.IsNullOrWhiteSpace(cargo.NomeCargo))
@@ -103,6 +113,8 @@
 			await cargoController.Salvar();
 			novo = true;
 			campoBloqueado = true;
+
+			await CarregarCargos();
 		}
 	}
 

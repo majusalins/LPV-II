@@ -1,5 +1,124 @@
-﻿<h3>CadastroCandidato</h3>
+﻿@page "/cadastroCandidato"
+@rendermode InteractiveServer
+@using AppConcurso.Models
+@using AppConcurso.Controllers
+@inject CandidatoController candidController
+@inject NavigationManager navegacao
+
+<div class="container">
+    <h3 class="mb-4">CADASTRO DE CANDIDATO</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nome:</label>
+                        <input @bind="candidato.Nome" class="form-control" disabled="@campoBloqueado" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>CPF:</label>
+                        <input @bind="candidato.Cpf" class="form-control" disabled="@campoBloqueado" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Data de nascimento:</label>
+                        <input @bind="candidato.DataNasc" type="date" class="form-control" disabled="@campoBloqueado" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                @if (novo == false)
+                {
+                    <button class="btn btn-primary" @onclick="Salvar">Salvar</button>
+                    <button class="btn btn-secondary ml-2" @onclick="NovoCadastro">Cancelar</button>
+                }
+                else
+                {
+                    <div class="alert alert-success" role="alert">
+                        Salvo com Sucesso!
+                    </div>
+                    <button class="btn btn-success" @onclick="NovoCadastro">Novo Cadastro</button>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-4">
+        <div class="card-header">
+            <h5>Candidatos Cadastrados</h5>
+        </div>
+        <div class="card-body">
+            @if (candidatosCadastrados == null || candidatosCadastrados.Count == 0)
+            {
+                <p>Nenhum candidato cadastrado.</p>
+            }
+            else
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Data de Nascimento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in candidatosCadastrados)
+                        {
+                            <tr>
+                                <td>@item.Nome</td>
+                                <td>@item.Cpf</td>
+                                <td>@item.DataNasc?.ToString("dd/MM/yyyy")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</div>
 
 @code {
+    private Candidato candidato = new Candidato();
+    private List<Candidato> candidatosCadastrados = new List<Candidato>();
+    private bool novo = false;
+    private bool campoBloqueado = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await CarregarCandidatos();
+    }
+
+    private async Task CarregarCandidatos()
+    {
+        candidatosCadastrados = await candidController.ListaCandidatos();
+        StateHasChanged();
+    }
+
+    private async Task Salvar()
+    {
+        if (!string.IsNullOrWhiteSpace(candidato.Nome))
+        {
+            await candidController.Add(candidato);
+            await candidController.Salvar();
+            novo = true;
+            campoBloqueado = true;
+
+            await CarregarCandidatos();
+        }
+    }
+
+    private void NovoCadastro()
+    {
+        novo = false;
+        navegacao.NavigateTo("/cadastroCandidato", forceLoad: true);
+    }
 
 }

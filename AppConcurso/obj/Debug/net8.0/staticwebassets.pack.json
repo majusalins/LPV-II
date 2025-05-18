@@ -1,28 +1,24 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppConcurso\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppConcurso.bundle.scp.css",
-      "PackagePath": "staticwebassets\\AppConcurso.jxhyw5z9mb.bundle.scp.css"
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppConcurso\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppConcurso.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AppConcurso.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppConcurso\\wwwroot\\app.css",
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppConcurso\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppConcurso\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppConcurso\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppConcurso\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppConcurso\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppConcurso\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppConcurso\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AppConcurso.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AppConcurso.Microsoft.AspNetCore.StaticWebAssets.props",

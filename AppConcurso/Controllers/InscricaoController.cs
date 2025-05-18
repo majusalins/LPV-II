@@ -14,12 +14,6 @@ namespace AppConcurso.Controllers
             _context = context;
         }
 
-        public async Task<List<Inscricao>> ListaInscricoes()
-        {
-            var inscricoes = await _context.Inscricoes.Include(x => x.Cargo).Include(x => x.Candidato).ToListAsync();
-            return inscricoes;
-        }
-
         public async Task Add(Inscricao inscricao)
         {
             await _context.Inscricoes.AddAsync(inscricao);
@@ -28,6 +22,14 @@ namespace AppConcurso.Controllers
         public async Task Salvar()
         {
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<Inscricao>> ListaInscricoes()
+        {
+            return await _context.Inscricoes
+                .Include(i => i.Cargo)
+                .Include(i => i.Candidato)
+                .ToListAsync();
         }
     }
 }
