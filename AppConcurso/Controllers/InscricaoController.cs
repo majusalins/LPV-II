@@ -31,5 +31,27 @@ namespace AppConcurso.Controllers
                 .Include(i => i.Candidato)
                 .ToListAsync();
         }
+
+        public async Task<Inscricao> BuscarInscricao(string busca){
+            if (int.TryParse(busca, out int numero)){
+                return await _context.Inscricoes
+                .Include(i => i.Cargo)
+                .Include(i => i.Candidato)
+                .FirstOrDefaultAsync(i => i.NumInscricao == numero);
+            }
+            
+            return await _context.Inscricoes
+                .Include(i => i.Cargo)
+                .Include(i => i.Candidato)
+                .FirstOrDefaultAsync(i => i.Candidato.Cpf == busca);
+        }
+
+        public async Task AtualizarNotas(Inscricao inscricao)
+        {
+            var existente = await _context.Inscricoes.FindAsync(inscricao.Id);
+            inscricao.NotaConhGerais = inscricao.NotaConhGerais;
+            inscricao.NotaConhEspec = inscricao.NotaConhEspec;
+            await _context.SaveChangesAsync();
+        }
     }
 }

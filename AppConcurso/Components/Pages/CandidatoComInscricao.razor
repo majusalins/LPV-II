@@ -1,4 +1,5 @@
 ﻿@page "/cadastroComInscricao"
+@rendermode InteractiveServer
 @using AppConcurso.Models
 @using AppConcurso.Controllers
 @inject CandidatoController candidatoController
@@ -47,17 +48,18 @@
             </div>
 
             <div class="mt-4">
-                @if (mostrarConfirmacao)
+                @if (mostrarConfirmacao == false)
+                {
+                    <button class="btn btn-primary" @onclick="SalvarCadastroComInscricao">Salvar</button>
+                    <button class="btn btn-secondary ml-2" @onclick="LimparFormulario">Cancelar</button>
+                    
+                }
+                else
                 {
                     <div class="alert alert-success" role="alert">
                         Cadastro e inscrição realizados com sucesso!
                     </div>
                     <button class="btn btn-success" @onclick="NovoCadastro">Nova Inscrição</button>
-                }
-                else
-                {
-                    <button class="btn btn-primary" @onclick="SalvarCadastroComInscricao">Salvar</button>
-                    <button class="btn btn-secondary ml-2" @onclick="LimparFormulario">Cancelar</button>
                 }
             </div>
         </div>
@@ -102,9 +104,11 @@
     private Candidato novoCandidato = new Candidato();
     private List<Cargo> cargosDisponiveis = new List<Cargo>();
     private List<Candidato> candidatosCadastrados = new List<Candidato>();
+    private List<Inscricao> listaInsc = new();
     private int cargoSelecionadoId;
     private bool mostrarConfirmacao = false;
     private bool campoBloqueado = false;
+    private string mensagemErro = "";
 
     protected override async Task OnInitializedAsync()
     {
@@ -113,12 +117,28 @@
 
     private async Task CarregarDados()
     {
-        candidatosCadastrados = await candidatoController.ListaCandidatos();
-        cargosDisponiveis = await cargoController.ListaCargos();
+        try
+        {
+            candidatosCadastrados = await candidatoController.ListaCandidatos();
+            cargosDisponiveis = await cargoController.ListaCargos();
+            listaInsc = await inscricaoController.ListaInscricoes();
+        }
+        catch (Exception ex)
+        {
+            MostrarErro($"Erro ao carregar dados: {ex.Message}");
+        }
     }
 
     private async Task SalvarCadastroComInscricao()
     {
+        mensagemErro = "";
+        
+        if (!ValidarCampos())
+        {
+            MostrarErro("Preencha todos os campos obrigatórios");
+            return;
+        }
+
         try
         {
             await candidatoController.Add(novoCandidato);
@@ -126,9 +146,10 @@
 
             var inscricao = new Inscricao
             {
-                NumInscricao = novoCandidato.Id,
+                IdCandidato = novoCandidato.Id, 
                 IdCargo = cargoSelecionadoId,
-                DataInsc = DateTime.Now
+                DataInsc = DateTime.Now,
+                NumInscricao = 10000 + listaInsc.Count + 1
             };
 
             await inscricaoController.Add(inscricao);
@@ -139,10 +160,25 @@
             mostrarConfirmacao = true;
             campoBloqueado = true;
         }
-        catch
+        catch (Exception ex)
         {
-            // Trate erros aqui
+            MostrarErro($"Erro inesperado: {ex.Message}");
         }
+    }
+
+    private bool ValidarCampos()
+    {
+        return !string.IsNullOrWhiteSpace(novoCandidato.Nome) &&
+               !string.IsNullOrWhiteSpace(novoCandidato.Cpf) &&
+               novoCandidato.DataNasc != null &&
+               cargoSelecionadoId > 0;
+    }
+
+    private void MostrarErro(string mensagem)
+    {
+        mensagemErro = mensagem;
+        mostrarConfirmacao = false;
+        StateHasChanged();
     }
 
     private void NovoCadastro()
@@ -150,12 +186,13 @@
         novoCandidato = new Candidato();
         cargoSelecionadoId = 0;
         mostrarConfirmacao = false;
-        navegacao.NavigateTo("/cadastroComInscricao", forceLoad: true);    
-        }
+        campoBloqueado = false;
+        mensagemErro = "";
+        StateHasChanged();
+    }
 
     private void LimparFormulario()
     {
         NovoCadastro();
-        StateHasChanged();
     }
 }
