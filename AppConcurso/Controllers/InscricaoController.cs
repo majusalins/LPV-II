@@ -32,14 +32,16 @@ namespace AppConcurso.Controllers
                 .ToListAsync();
         }
 
-        public async Task<Inscricao> BuscarInscricao(string busca){
-            if (int.TryParse(busca, out int numero)){
+        public async Task<Inscricao> BuscarInscricao(string busca)
+        {
+            if (int.TryParse(busca, out int numero))
+            {
                 return await _context.Inscricoes
                 .Include(i => i.Cargo)
                 .Include(i => i.Candidato)
                 .FirstOrDefaultAsync(i => i.NumInscricao == numero);
             }
-            
+
             return await _context.Inscricoes
                 .Include(i => i.Cargo)
                 .Include(i => i.Candidato)
@@ -52,6 +54,15 @@ namespace AppConcurso.Controllers
             inscricao.NotaConhGerais = inscricao.NotaConhGerais;
             inscricao.NotaConhEspec = inscricao.NotaConhEspec;
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<Inscricao>> ObterInscricoesComNotas()
+        {
+            return await _context.Inscricoes
+                .Include(i => i.Candidato)
+                .Include(i => i.Cargo)
+                .Where(i => i.NotaConhEspec != null && i.NotaConhGerais != null)
+                .ToListAsync();
         }
     }
 }

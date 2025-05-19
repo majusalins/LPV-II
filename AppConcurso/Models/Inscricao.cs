@@ -31,5 +31,8 @@ namespace AppConcurso.Models
 
         [ForeignKey("IdCargo")]
         public Cargo? Cargo { get; set; }
+
+        [NotMapped]
+        public decimal? Total => (NotaConhGerais ?? 0) + (NotaConhEspec ?? 0);
     }
 }

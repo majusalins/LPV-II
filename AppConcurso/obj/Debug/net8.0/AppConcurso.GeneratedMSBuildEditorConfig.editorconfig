@@ -46,6 +46,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYW5jYW1lbnRvTm90YXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/majuh/source/repos/majusalins/LPV-II/AppConcurso/Components/Pages/ResultadoFinal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXN1bHRhZG9GaW5hbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/majuh/source/repos/majusalins/LPV-II/AppConcurso/Components/Pages/ResultadoPreliminar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXN1bHRhZG9QcmVsaW1pbmFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/majuh/source/repos/majusalins/LPV-II/AppConcurso/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

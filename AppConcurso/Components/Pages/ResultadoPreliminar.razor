@@ -1,0 +1,64 @@
+@page "/resultadoPreliminar"
+@rendermode InteractiveServer
+@using AppConcurso.Models
+@using AppConcurso.Controllers
+@inject InscricaoController inscricaoController
+
+<div class="container">
+    <h3 class="mb-4">RESULTADO PRELIMINAR</h3>
+    
+    <div class="card">
+        <div class="card-body">
+            @if (resultados == null)
+            {
+                <p>Carregando resultados...</p>
+            }
+            else if (!resultados.Any())
+            {
+                <p>Nenhum resultado disponível</p>
+            }
+            else
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Nome</th>
+                            <th>Nota Geral</th>
+                            <th>Nota Específica</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var ordenados = resultados
+                                .Where(r => r.NotaConhGerais.HasValue && r.NotaConhEspec.HasValue)
+                                .OrderByDescending(r => r.Total)
+                                .ToList();
+                        }
+                        @for (int i = 0; i < ordenados.Count; i++)
+                        {
+                            var item = ordenados[i];
+                            <tr>
+                                <td>@(i + 1)</td>
+                                <td>@item.Candidato?.Nome</td>
+                                <td>@item.NotaConhGerais?.ToString("N1")</td>
+                                <td>@item.NotaConhEspec?.ToString("N1")</td>
+                                <td>@item.Total?.ToString("N1")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<Inscricao> resultados = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        resultados = await inscricaoController.ObterInscricoesComNotas();
+    }
+}

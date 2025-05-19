@@ -1,0 +1,84 @@
+@page "/resultadoFinal"
+@rendermode InteractiveServer
+@using AppConcurso.Models
+@using AppConcurso.Controllers
+@inject InscricaoController inscricaoController
+
+<div class="container">
+    <h3 class="mb-4">RESULTADO FINAL</h3>
+    <div class="alert alert-info">
+        Critérios de Desempate:
+        <ol>
+            <li>Maior nota em Conhecimentos Específicos</li>
+            <li>Maior nota em Conhecimentos Gerais</li>
+            <li>Candidato mais idoso</li>
+        </ol>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            @if (resultados == null)
+            {
+                <p>Carregando resultados...</p>
+            }
+            else if (!resultados.Any())
+            {
+                <p>Nenhum resultado disponível</p>
+            }
+            else
+            {
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Nome</th>
+                            <th>Nota Geral</th>
+                            <th>Nota Específica</th>
+                            <th>Idade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            var ordenados = resultados
+                                .Where(r => r.Candidato != null)
+                                .OrderByDescending(r => r.NotaConhEspec)
+                                .ThenByDescending(r => r.NotaConhGerais)
+                                .ThenBy(r => r.Candidato.DataNasc)
+                                .ToList();
+                        }
+                        @for (int i = 0; i < ordenados.Count; i++)
+                        {
+                            var item = ordenados[i];
+                            <tr>
+                                <td>@(i + 1)</td>
+                                <td>@item.Candidato?.Nome</td>
+                                <td>@item.NotaConhGerais?.ToString("N1")</td>
+                                <td>@item.NotaConhEspec?.ToString("N1")</td>
+                                <td>@CalcularIdade(item.Candidato?.DataNasc)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<Inscricao> resultados = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        resultados = await inscricaoController.ObterInscricoesComNotas();
+    }
+
+    private int CalcularIdade(DateTime? dataNasc)
+    {
+        if (!dataNasc.HasValue) return 0;
+        
+        var hoje = DateTime.Today;
+        var idade = hoje.Year - dataNasc.Value.Year;
+        if (dataNasc.Value.Date > hoje.AddYears(-idade)) idade--;
+        return idade;
+    }
+}
