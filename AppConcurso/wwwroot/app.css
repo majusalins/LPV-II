@@ -1,5 +1,6 @@
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #daeaf0;
 }
 
 a, .btn-link {
@@ -48,4 +49,48 @@ h1:focus {
 
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 36px;
+    color: #08506c;
+}
+
+.home-page-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+}
+
+.home-page-text{
+    font-weight: bold;
+    font-size: 24px;
+    color: #08506c;
+}
+
+label{
+    font-weight: bold;
+    font-size: 16px;
+    color: #08506c;
+}
+
+.list-item-header{
+    font-weight: bold;
+    font-size: 16px;
+    color: #08506c;
+}
+
+.list-item-content{
+    font-weight: normal;
+    font-size: 16px;
+    color: #08506c;
+}
+
+h5{
+    font-weight: bold;
+    font-size: 20px;
+    color: #08506c;
 }

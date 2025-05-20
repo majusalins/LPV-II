@@ -6,7 +6,7 @@
 @inject NavigationManager navegacao
 
 <div class="container">
-    <h3 class="mb-4">CADASTRO DE CANDIDATO</h3>
+    <h1>CADASTRO DE CANDIDATO</h1>
     <div class="card">
         <div class="card-body">
             <div class="row">
@@ -27,7 +27,7 @@
             <div class="row mt-3">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Data de nascimento:</label>
+                        <label>Data de Nascimento:</label>
                         <input @bind="candidato.DataNasc" type="date" class="form-control" disabled="@campoBloqueado" />
                     </div>
                 </div>
@@ -64,18 +64,18 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Nome</th>
-                            <th>CPF</th>
-                            <th>Data de Nascimento</th>
+                            <th class="list-item-header">Nome</th>
+                            <th class="list-item-header">CPF</th>
+                            <th class="list-item-header">Data de Nascimento</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in candidatosCadastrados)
                         {
                             <tr>
-                                <td>@item.Nome</td>
-                                <td>@item.Cpf</td>
-                                <td>@item.DataNasc?.ToString("dd/MM/yyyy")</td>
+                                <td class="list-item-content">@item.Nome</td>
+                                <td class="list-item-content">@item.Cpf</td>
+                                <td class="list-item-content">@item.DataNasc?.ToString("dd/MM/yyyy")</td>
                             </tr>
                         }
                     </tbody>

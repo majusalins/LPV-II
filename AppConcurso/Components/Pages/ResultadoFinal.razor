@@ -5,7 +5,7 @@
 @inject InscricaoController inscricaoController
 
 <div class="container">
-    <h3 class="mb-4">RESULTADO FINAL</h3>
+    <h1>RESULTADO FINAL</h1>
     <div class="alert alert-info">
         Critérios de Desempate:
         <ol>
@@ -30,11 +30,11 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Posição</th>
-                            <th>Nome</th>
-                            <th>Nota Geral</th>
-                            <th>Nota Específica</th>
-                            <th>Idade</th>
+                            <th class="list-item-header">Posição</th>
+                            <th class="list-item-header">Nome</th>
+                            <th class="list-item-header">Nota Geral</th>
+                            <th class="list-item-header">Nota Específica</th>
+                            <th class="list-item-header">Idade</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,11 +50,11 @@
                         {
                             var item = ordenados[i];
                             <tr>
-                                <td>@(i + 1)</td>
-                                <td>@item.Candidato?.Nome</td>
-                                <td>@item.NotaConhGerais?.ToString("N1")</td>
-                                <td>@item.NotaConhEspec?.ToString("N1")</td>
-                                <td>@CalcularIdade(item.Candidato?.DataNasc)</td>
+                                <td class="list-item-content">@(i + 1)</td>
+                                <td class="list-item-content">@item.Candidato?.Nome</td>
+                                <td class="list-item-content">@item.NotaConhGerais?.ToString("N1")</td>
+                                <td class="list-item-content">@item.NotaConhEspec?.ToString("N1")</td>
+                                <td class="list-item-content">@CalcularIdade(item.Candidato?.DataNasc)</td>
                             </tr>
                         }
                     </tbody>

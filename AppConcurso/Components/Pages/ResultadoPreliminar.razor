@@ -5,7 +5,7 @@
 @inject InscricaoController inscricaoController
 
 <div class="container">
-    <h3 class="mb-4">RESULTADO PRELIMINAR</h3>
+    <h1>RESULTADO PRELIMINAR</h1>
     
     <div class="card">
         <div class="card-body">
@@ -22,11 +22,11 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Posição</th>
-                            <th>Nome</th>
-                            <th>Nota Geral</th>
-                            <th>Nota Específica</th>
-                            <th>Total</th>
+                            <th class="list-item-header">Posição</th>
+                            <th class="list-item-header">Nome</th>
+                            <th class="list-item-header">Nota Geral</th>
+                            <th class="list-item-header">Nota Específica</th>
+                            <th class="list-item-header">Total</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,11 +40,11 @@
                         {
                             var item = ordenados[i];
                             <tr>
-                                <td>@(i + 1)</td>
-                                <td>@item.Candidato?.Nome</td>
-                                <td>@item.NotaConhGerais?.ToString("N1")</td>
-                                <td>@item.NotaConhEspec?.ToString("N1")</td>
-                                <td>@item.Total?.ToString("N1")</td>
+                                <td class="list-item-content">@(i + 1)</td>
+                                <td class="list-item-content">@item.Candidato?.Nome</td>
+                                <td class="list-item-content">@item.NotaConhGerais?.ToString("N1")</td>
+                                <td class="list-item-content">@item.NotaConhEspec?.ToString("N1")</td>
+                                <td class="list-item-content">@item.Total?.ToString("N1")</td>
                             </tr>
                         }
                     </tbody>

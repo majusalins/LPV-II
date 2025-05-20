@@ -8,7 +8,7 @@
 @inject NavigationManager navegacao
 
 <div class="container">
-    <h3 class="mb-4">CADASTRO DE CANDIDATO COM INSCRIÇÃO</h3>
+    <h1>CADASTRO DE CANDIDATO COM INSCRIÇÃO</h1>
     <div class="card">
         <div class="card-body">
             <div class="row">
@@ -79,18 +79,18 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Nome</th>
-                            <th>CPF</th>
-                            <th>Data Nasc.</th>
+                            <th class="list-item-header">Nome</th>
+                            <th class="list-item-header">CPF</th>
+                            <th class="list-item-header">Data Nasc.</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var candidato in candidatosCadastrados)
                         {
                             <tr>
-                                <td>@candidato.Nome</td>
-                                <td>@candidato.Cpf</td>
-                                <td>@candidato.DataNasc?.ToString("dd/MM/yyyy")</td>
+                                <td class="list-item-content">@candidato.Nome</td>
+                                <td class="list-item-content">@candidato.Cpf</td>
+                                <td class="list-item-content">@candidato.DataNasc?.ToString("dd/MM/yyyy")</td>
                             </tr>
                         }
                     </tbody>

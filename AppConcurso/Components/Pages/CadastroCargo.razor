@@ -6,7 +6,7 @@
 @inject NavigationManager navegacao
 
 <div class="container">
-	<h3 class="mb-4">CADASTRO DE CARGO</h3>
+	<h1>CADASTRO DE CARGO</h1>
 	<div class="card">
 		<div class="card-body">
 			<div class="row">
@@ -64,20 +64,20 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th>Nome</th>
-							<th>Edital</th>
-							<th>Salário</th>
-							<th>Inscrições</th>
+							<th class="list-item-header">Nome</th>
+							<th class="list-item-header">Edital</th>
+							<th class="list-item-header">Salário</th>
+							<th class="list-item-header">Inscrições</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach (var item in cargosCadastrados)
 						{
 							<tr>
-								<td>@item.NomeCargo</td>
-								<td>@item.Edital</td>
-								<td>@item.Salario?.ToString("C")</td>
-								<td>@(item.Inscricoes?.Count ?? 0)</td>
+								<td class="list-item-content">@item.NomeCargo</td>
+								<td class="list-item-content">@item.Edital</td>
+								<td class="list-item-content">@item.Salario?.ToString("C")</td>
+								<td class="list-item-content">@(item.Inscricoes?.Count ?? 0)</td>
 							</tr>
 						}
 					</tbody>
