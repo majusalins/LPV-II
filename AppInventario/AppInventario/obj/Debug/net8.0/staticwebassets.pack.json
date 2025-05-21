@@ -1,28 +1,24 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppInventario\\AppInventario\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppInventario.bundle.scp.css",
-      "PackagePath": "staticwebassets\\AppInventario.1mgny9cbjf.bundle.scp.css"
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppInventario\\AppInventario\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppInventario.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AppInventario.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppInventario\\AppInventario\\wwwroot\\app.css",
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppInventario\\AppInventario\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppInventario\\AppInventario\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppInventario\\AppInventario\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppInventario\\AppInventario\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppInventario\\AppInventario\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\2022202060035\\Documents\\AppInventario\\AppInventario\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\majuh\\source\\repos\\majusalins\\LPV-II\\AppInventario\\AppInventario\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AppInventario.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AppInventario.Microsoft.AspNetCore.StaticWebAssets.props",

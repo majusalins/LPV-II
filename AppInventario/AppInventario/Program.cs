@@ -1,7 +1,11 @@
-using AppInventario.Components;
+﻿using AppInventario.Components;
 using AppInventario.Contexto;
 using AppInventario.Services;
 using Microsoft.EntityFrameworkCore;
+using AppInventario.Components.Account;
+using AppInventario.Data;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +19,32 @@ builder.Services.AddScoped<PropriedadeService>();
 string mySqlConexao = builder.Configuration.GetConnectionString("BaseConexao");
 builder.Services.AddDbContextPool<ContextoBD>(options =>
 options.UseMySql(mySqlConexao, ServerVersion.AutoDetect(mySqlConexao)));
+
+string mySqlConexaoData = builder.Configuration.GetConnectionString("BaseConexao");
+builder.Services.AddDbContextPool<AppInventarioContext>(options =>
+options.UseMySql(mySqlConexaoData, ServerVersion.AutoDetect(mySqlConexaoData)));
+
+builder.Services.AddCascadingAuthenticationState();
+
+builder.Services.AddScoped<IdentityUserAccessor>();
+
+builder.Services.AddScoped<IdentityRedirectManager>();
+
+builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
+
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultScheme = IdentityConstants.ApplicationScheme;
+        options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+    })
+    .AddIdentityCookies();
+
+builder.Services.AddIdentityCore<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<AppInventarioContext>()
+    .AddSignInManager()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddSingleton<IEmailSender<IdentityUser>, IdentityNoOpEmailSender>();
 
 var app = builder.Build();
 
@@ -33,5 +63,7 @@ app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+
+app.MapAdditionalIdentityEndpoints();;
 
 app.Run();
